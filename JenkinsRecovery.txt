@@ -1,0 +1,22 @@
+Forgot your Jenkins Login details?
+Follow each step:
+======================================================
+In the Jenkins Server (CLI)
+======================================================
+1. sudo vi /var/lib/jenkins/config.xml
+2. <useSecurity>true</useSecurity>
+	Enter insert mode and set value to false
+3. <useSecurity>false</useSecurity>
+	Esc and save
+======================================================
+In the Jenkins Browser (GUI)
+======================================================
+1. Click on People on the left-hand navigation menu.
+2. Click on the Admin.
+3. Delete the user account.
+4. Navigate to Jenkins / Manage Jenkins.
+5. Click on Configure Global Security
+6. Under Security Realm, select Jenkins’ own user database
+7. In the Authorization section, select Logged-in users can do anything.
+8. Unselect Allow anonymous read access.
+9. Click Save to save your changes.
